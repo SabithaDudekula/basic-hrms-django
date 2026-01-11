@@ -1,0 +1,37 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'employees/style.css' %}">
+
+<div class="container">
+  <h2>{{ employee.name }}</h2>
+
+  <p><strong>Email:</strong> {{ employee.email }}</p>
+  <p><strong>Address:</strong> {{ employee.address }}</p>
+  <p><strong>Department:</strong> {{ employee.department }}</p>
+  <p><strong>Designation:</strong> {{ employee.designation }}</p>
+  <p><strong>Date of Joining:</strong> {{ employee.date_of_joining }}</p>
+
+  <h3>Attendance Records</h3>
+
+  <table>
+    <tr>
+      <th>Date</th>
+      <th>In Time</th>
+      <th>Out Time</th>
+    </tr>
+
+    {% for a in attendance %}
+    <tr>
+      <td>{{ a.date }}</td>
+      <td>{{ a.in_time }}</td>
+      <td>{{ a.out_time }}</td>
+    </tr>
+    {% empty %}
+    <tr>
+      <td colspan="3">No attendance records</td>
+    </tr>
+    {% endfor %}
+  </table>
+
+  <br>
+  <a href="/employees/">⬅ Back to Employee List</a>
+</div>

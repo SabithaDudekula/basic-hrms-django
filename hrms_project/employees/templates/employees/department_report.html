@@ -1,0 +1,23 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'employees/style.css' %}">
+
+<div class="container">
+  <h2>Department-wise Employee Report</h2>
+
+  <table>
+    <tr>
+      <th>Department</th>
+      <th>Employee Count</th>
+    </tr>
+
+    {% for item in report %}
+    <tr>
+      <td>{{ item.department }}</td>
+      <td>{{ item.count }}</td>
+    </tr>
+    {% endfor %}
+  </table>
+
+  <br>
+  <a href="/employees/">⬅ Back to Employee List</a>
+</div>
