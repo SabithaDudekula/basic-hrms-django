@@ -1,88 +1,55 @@
 # Basic HRMS – Django Application
 
 ## Project Description
-This project is a **Basic Human Resource Management System (HRMS)** developed using **Django**.  
-It was built as part of the **Intern – Backend Developer assignment**.
+This project is a Basic Human Resource Management System (HRMS) developed using Django.
+It was built as part of the Intern – Backend Developer assignment.
 
 The application covers basic HR functionalities like employee management,
 attendance tracking, and simple reporting.
 
----
-
 ## Technologies Used
-- Python
-- Django
-- SQLite (default Django database)
-- HTML and CSS
-- Git & GitHub
+Python  
+Django  
+SQLite  
+HTML  
+CSS  
 
----
-
-## Features Implemented
-
-### 1. Employee Management
-- Created Employee model with fields:
-  - Name
-  - Email
-  - Address
-  - Department
-  - Designation
-  - Date of Joining
-- Employees can be added and managed using Django Admin
-- Employee list is displayed on a web page
-
----
-
-### 2. Attendance Tracking
-- Attendance model linked to Employee
-- Attendance fields:
-  - Date
-  - In Time
-  - Out Time
-- API endpoint to mark attendance
-- Attendance details are shown on the employee detail page
-
----
-
-### 3. Basic Reporting
-- Department-wise employee count
-- Implemented using Django ORM
-- Displayed in table format
-
----
-
-## Project Structure
-- `employees/` – Contains employee and attendance logic
-- `models.py` – Database models
-- `views.py` – Application logic and APIs
-- `urls.py` – URL routing
-- `templates/` – HTML files
-- `static/` – CSS styling
-
----
+## Features
+Employee Management  
+Attendance Tracking  
+Department-wise Reporting  
 
 ## How to Run the Project
 
-1. Clone the repository
-```bash
-git clone https://github.com/SabithaDudekula/basic-hrms-django.git
+Step 1: Clone the repository  
+git clone https://github.com/SabithaDudekula/basic-hrms-django.git  
 
-2.  Go to project folder
-cd basic-hrms-django
+Step 2: Go to project folder  
+cd basic-hrms-django  
 
-3.  Create and activate virtual environment
-python -m venv venv
-venv\Scripts\activate
+Step 3: Create virtual environment  
+python -m venv venv  
 
-4. Install Django
-pip install django
+Step 4: Activate virtual environment  
+venv\Scripts\activate  
 
-5.  Run migrations
-python manage.py makemigrations
-python manage.py migrate
+Step 5: Install Django  
+pip install django  
 
-6.  Create admin user
-python manage.py createsuperuser
+Step 6: Run migrations  
+python manage.py makemigrations  
+python manage.py migrate  
 
-7.  Run server
-python manage.py runserver
+Step 7: Create admin user  
+python manage.py createsuperuser  
+
+Step 8: Run server  
+python manage.py runserver  
+
+## URLs
+Admin: http://127.0.0.1:8000/admin/  
+Employees: http://127.0.0.1:8000/employees/  
+Report: http://127.0.0.1:8000/report/  
+
+## Author
+Sabitha Dudekula
